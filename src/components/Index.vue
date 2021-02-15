@@ -167,7 +167,7 @@ export default {
 .tree li a .child_box:hover,
 .tree li a .child_box:hover i,
 .tree li a .child_box:hover span,
-.tree li a .child_box:hover + ul li a .child_box {
+.tree li a .child_box:hover ~ ul li a .child_box {
 	background: #c8e4f8;
 	color: #000;
 	border: 1px solid #94a0b4;
@@ -177,5 +177,17 @@ export default {
 .tree li .child_box:hover + ul::before,
 .tree li .child_box:hover + ul ul::before {
 	border-color: #94a0b4;
+}
+
+.box_popup {
+	display: none;
+}
+.child_box:hover ~ .box_popup {
+	position: relative;
+	background: black;
+	color: white;
+	border-radius: 8px;
+	line-height: 2px;
+	display: inline-block;
 }
 </style>
