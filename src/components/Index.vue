@@ -219,7 +219,7 @@ ul {
 .box_popup {
 	display: none;
 }
-.child_box:hover ~ .box_popup {
+img:hover ~ .box_popup {
 	position: absolute;
 	width: 120px;
 	background: #4d4d4d;
@@ -228,9 +228,9 @@ ul {
 	line-height: 2px;
 	display: inline-block;
 	z-index: 999;
-	margin-left: 5px;
+	margin-left: 105px;
 }
-.child_box:hover ~ .box_popup:before {
+img:hover ~ .box_popup:before {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -248,7 +248,7 @@ ul {
 	li:last-child
 	ul
 	li
-	.child_box:hover
+	img:hover
 	~ .box_popup {
 	position: absolute;
 	width: 120px;
@@ -258,9 +258,10 @@ ul {
 	line-height: 2px;
 	display: inline-block;
 	z-index: 999;
-	left: 30px;
-	top: -80px;
+	margin-left: 0px;
+	top: -115px;
 	transition: 0.5s;
+	cursor: pointer;
 }
 .tree
 	li
@@ -270,12 +271,52 @@ ul {
 	li:last-child
 	ul
 	li
-	.child_box:hover
+	img:hover
 	~ .box_popup:before {
 	content: "";
 	position: absolute;
 	top: 114%;
-	left: 50%;
+	left: 40%;
+	border: solid 10px transparent;
+	border-top-color: #4d4d4d;
+	z-index: 1;
+}
+.tree
+	li
+	ul
+	li:last-child
+	ul
+	li:last-child
+	img:hover
+	~ .box_popup {
+	/* position: absolute;
+	width: 120px;
+	background: #4d4d4d;
+	color: white;
+	border-radius: 8px;
+	line-height: 2px;
+	display: inline-block;
+	z-index: 999;
+	margin-left: 0px;
+	top: -115px;
+	transition: 0.5s;
+	cursor: pointer; */
+	background: red;
+}
+.tree
+	li
+	ul:last-child
+	li:last-child
+	ul
+	li:last-child
+	ul
+	li
+	img:hover
+	~ .box_popup:before {
+	content: "";
+	position: absolute;
+	top: 114%;
+	left: 40%;
 	border: solid 10px transparent;
 	border-top-color: #4d4d4d;
 	z-index: 1;
