@@ -12,7 +12,6 @@
 import Tree from "../components/TreeComponent";
 export default {
 	components: {
-		TreeChart,
 		Tree,
 	},
 
