@@ -43,26 +43,50 @@ export default {
 							{
 								name: "grandchild2",
 								image_url: "https://picsum.photos/200/200",
+								children: [
+									{
+										name: "grandchild",
+										image_url: "https://picsum.photos/400/400",
+									},
+									{
+										name: "grandchild2",
+										image_url: "https://picsum.photos/200/200",
+									},
+								],
 							},
 						],
 					},
 					{
-						name: "children2",
-						image_url: "https://picsum.photos/400/400",
-						mate: [
-							{
-								name: "mate",
-								image_url: "https://picsum.photos/400/400",
-							},
-						],
+						name: "children1",
+						image_url: "https://picsum.photos/200/200",
 						children: [
 							{
 								name: "grandchild",
 								image_url: "https://picsum.photos/400/400",
+								children: [
+									{
+										name: "grandchild",
+										image_url: "https://picsum.photos/400/400",
+									},
+									{
+										name: "grandchild2",
+										image_url: "https://picsum.photos/200/200",
+									},
+								],
 							},
 							{
 								name: "grandchild2",
 								image_url: "https://picsum.photos/200/200",
+								children: [
+									{
+										name: "grandchild",
+										image_url: "https://picsum.photos/400/400",
+									},
+									{
+										name: "grandchild2",
+										image_url: "https://picsum.photos/200/200",
+									},
+								],
 							},
 						],
 					},
@@ -73,6 +97,13 @@ export default {
 };
 </script>
 <style>
+body {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	padding-left: 0px !important;
+}
 .tree {
 	width: 100%;
 	height: auto;
@@ -82,6 +113,10 @@ export default {
 	padding-top: 20px;
 	position: relative;
 	transition: 0.5s;
+	padding-left: 0px !important;
+}
+.tree ul li ul {
+	padding-left: 0px !important;
 }
 .tree li {
 	display: inline-table;
@@ -90,6 +125,8 @@ export default {
 	position: relative;
 	padding: 10px;
 	transition: 0.5s;
+	overflow: auto;
+	white-space: nowrap;
 }
 .tree li::before,
 .tree li::after {
@@ -146,14 +183,14 @@ export default {
 	border-radius: 5px;
 	transition: 0.5s;
 }
-.tree li a img {
+.tree li img {
 	width: 50px;
 	height: 50px;
 	margin-bottom: 10px !important;
 	border-radius: 100px;
 	margin: auto;
 }
-.tree li a span {
+.tree li span {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	color: #666;
@@ -164,10 +201,10 @@ export default {
 	font-weight: 500;
 }
 /*Hover-Section*/
-.tree li a .child_box:hover,
-.tree li a .child_box:hover i,
-.tree li a .child_box:hover span,
-.tree li a .child_box:hover ~ ul li a .child_box {
+.tree li .child_box:hover,
+.tree li .child_box:hover i,
+.tree li .child_box:hover span,
+.tree li .child_box:hover ~ ul li .child_box {
 	background: #c8e4f8;
 	color: #000;
 	border: 1px solid #94a0b4;
@@ -183,11 +220,64 @@ export default {
 	display: none;
 }
 .child_box:hover ~ .box_popup {
-	position: relative;
-	background: black;
+	position: absolute;
+	width: 120px;
+	background: #4d4d4d;
 	color: white;
 	border-radius: 8px;
 	line-height: 2px;
 	display: inline-block;
+	z-index: 999;
+	margin-left: 5px;
+}
+.child_box:hover ~ .box_popup:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	left: -20px;
+	border: solid 10px transparent;
+	border-right-color: #4d4d4d;
+	z-index: 1;
+}
+.tree
+	li
+	ul:last-child
+	li:last-child
+	ul
+	li:last-child
+	ul
+	li
+	.child_box:hover
+	~ .box_popup {
+	position: absolute;
+	width: 120px;
+	background: #4d4d4d;
+	color: white;
+	border-radius: 8px;
+	line-height: 2px;
+	display: inline-block;
+	z-index: 999;
+	left: 30px;
+	top: -80px;
+	transition: 0.5s;
+}
+.tree
+	li
+	ul:last-child
+	li:last-child
+	ul
+	li:last-child
+	ul
+	li
+	.child_box:hover
+	~ .box_popup:before {
+	content: "";
+	position: absolute;
+	top: 114%;
+	left: 50%;
+	border: solid 10px transparent;
+	border-top-color: #4d4d4d;
+	z-index: 1;
 }
 </style>
