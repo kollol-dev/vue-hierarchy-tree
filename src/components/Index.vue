@@ -240,7 +240,7 @@ img:hover ~ .box_popup:before {
 	border-right-color: #4d4d4d;
 	z-index: 1;
 }
-.tree
+/* .tree
 	li
 	ul:last-child
 	li:last-child
@@ -262,8 +262,8 @@ img:hover ~ .box_popup:before {
 	top: -115px;
 	transition: 0.5s;
 	cursor: pointer;
-}
-.tree
+} */
+/* .tree
 	li
 	ul:last-child
 	li:last-child
@@ -280,16 +280,18 @@ img:hover ~ .box_popup:before {
 	border: solid 10px transparent;
 	border-top-color: #4d4d4d;
 	z-index: 1;
-}
+} */
 .tree
-	li
-	ul
-	li:last-child
-	ul
-	li:last-child
+	> li
+	> div
+	> ul
+	> li:last-child
+	> div
+	> ul
+	> li:last-child
 	img:hover
 	~ .box_popup {
-	/* position: absolute;
+	position: absolute;
 	width: 120px;
 	background: #4d4d4d;
 	color: white;
@@ -300,17 +302,16 @@ img:hover ~ .box_popup:before {
 	margin-left: 0px;
 	top: -115px;
 	transition: 0.5s;
-	cursor: pointer; */
-	background: red;
+	cursor: pointer;
 }
 .tree
-	li
-	ul:last-child
-	li:last-child
-	ul
-	li:last-child
-	ul
-	li
+	> li
+	> div
+	> ul
+	> li:last-child
+	> div
+	> ul
+	> li:last-child
 	img:hover
 	~ .box_popup:before {
 	content: "";
@@ -320,5 +321,6 @@ img:hover ~ .box_popup:before {
 	border: solid 10px transparent;
 	border-top-color: #4d4d4d;
 	z-index: 1;
+	/* background: red !important; */
 }
 </style>
