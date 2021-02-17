@@ -1,8 +1,10 @@
 # vue-tree
 
-#screenshots
-![alt text](https://github.com/kollolx/vue-hierarchy-tree/tree/master/public/Screenshot_1.png)
-![alt text](https://github.com/kollolx/vue-hierarchy-tree/tree/master/public/Screenshot_2.png)
+# screenshots
+1
+![alt text](https://github.com/kollolx/vue-hierarchy-tree/blob/master/public/Screenshot_1.png?raw=true)
+2
+![alt text](https://github.com/kollolx/vue-hierarchy-tree/blob/master/public/Screenshot_2.png?raw=true)
 
 ## Project setup
 ```
